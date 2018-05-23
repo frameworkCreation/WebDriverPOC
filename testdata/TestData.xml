@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+	<TestData TCID = "COMMON" Key="HEAD">//*[@id='topBanner']/div</TestData>
+
+	<TestData TCID = "TC0001" Key="URL">http://wl305118:2018/cyclos/do/login</TestData>
+	<TestData TCID = "TC0001" Key="USERNAME">Ankit</TestData>
+	<TestData TCID = "TC0001" Key="PASSWORD">1234</TestData>
+	<TestData TCID = "TC0001" Key="CURRNAME">Testing1</TestData>
+	<TestData TCID = "TC0001" Key="CURRSYMBOL">Testing2</TestData>
+	<TestData TCID = "TC0001" Key="CURRPATTERN">#amount#Testing3</TestData>
+	<TestData TCID = "TC0001" Key="CURRDESCRIPTION">Testing4</TestData>
+</TestData>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Automation> 
+	<Config> 
+			<BROWSER>Chrome</BROWSER> 
+			<IMPLICIT-WAIT>30</IMPLICIT-WAIT> 
+			<URL>http://wl305118:2018/cyclos/do/login</URL> 
+			<REPORT-HEADING>Demo</REPORT-HEADING> 
+			<TOTAL-TIME-IN-SEC></TOTAL-TIME-IN-SEC> 
+			<LAST-RESULT-FILE-PATH></LAST-RESULT-FILE-PATH> 
+			<SET-RESULT-IN-QC></SET-RESULT-IN-QC> 
+			<QC-URL></QC-URL> 
+			<QC-UserID></QC-UserID> 
+			<QC-Pwd></QC-Pwd> 
+			<QC-Domain></QC-Domain> 
+			<QC-ProjectName></QC-ProjectName> 
+			<QC-TestSuitePath></QC-TestSuitePath> 
+			<QC-TestSuiteName></QC-TestSuiteName> 
+	</Config> 
+	<Email> 
+		<email-id>rahulnavgire.navgire@tieto.com</email-id> 
+	</Email> 
+	<Tasks> 
+		<Task ID="Smoke" Active="No">Smoke</Task>
+		
+		<Task ID="DemoTest" Active="Yes">Functional</Task> 
+	</Tasks> 
+	<TestCases> 						
+		<!-- <TestCase Active="Yes" ID="TC0001" Name="SmokeTest1" TaskID="Smoke" TestDataPath="testdata//TestData.xml" ORPath="OR//OR.xml" ExeTime="20">Login into Test Application</TestCase>
+		
+		<TestCase Active="Yes" ID="TC0002" Name="Functional Test Script" TaskID="Functional" TestDataPath="testdata//TestData.xml" ORPath="OR//OR.xml" ExeTime="20">Demo Test Script</TestCase>
+ -->	
+ 
+ 		<TestCase Active="Yes" ID="TC0001" Name="DemoTest" TaskID="DemoTest" TestDataPath="testdata//TestData.xml" ORPath="OR//OR.xml" ExeTime="20">Cyclos test</TestCase>
+ 
+ 
+ </TestCases> 
+</Automation>

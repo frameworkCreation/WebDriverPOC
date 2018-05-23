@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="12688" started-at="2018-04-09T11:24:22Z" finished-at="2018-04-09T11:24:35Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="12688" started-at="2018-04-09T11:24:22Z" finished-at="2018-04-09T11:24:35Z">
+      <class name="com.BusinessScript.CyclosDemo">
+        <test-method status="PASS" signature="TC0001()[pri:0, instance:com.BusinessScript.CyclosDemo@62ee68d8]" name="TC0001" duration-ms="12672" started-at="2018-04-09T16:54:22Z" finished-at="2018-04-09T16:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC0001 -->
+      </class> <!-- com.BusinessScript.CyclosDemo -->
+      <class name="com.ExecutionLayer.TestSuiteRunner">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.ExecutionLayer.TestSuiteRunner@9629756]" name="SetUp" is-config="true" duration-ms="145" started-at="2018-04-09T16:54:22Z" finished-at="2018-04-09T16:54:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ExecutionLayer.TestSuiteRunner@9629756]" name="TearDown" is-config="true" duration-ms="1383" started-at="2018-04-09T16:54:35Z" finished-at="2018-04-09T16:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.ExecutionLayer.TestSuiteRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

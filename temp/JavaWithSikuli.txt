@@ -1,0 +1,31 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.sikuli.script.FindFailed;
+import org.sikuli.script.Key;
+import org.sikuli.script.Screen;
+
+
+public class DownloadFileIE_Sikuli {
+
+ public static void main(String[] args) throws FindFailed {
+  System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\IEDriver.exe");
+  WebDriver driver = new InternetExplorerDriver();
+  Screen screen = new Screen();  
+  driver.manage().window().maximize();
+  driver.get("http://www.seleniumhq.org/download/");
+  driver.findElement(By.xpath("//*[@id='mainContent']/p[9]/a[2]")).sendKeys(Keys.ENTER);
+  
+  screen.rightClick("D:\\SaveAsIE1.png");
+  screen.keyDown(Key.DOWN);
+  screen.click("D:\\SaveAsIE2.png");
+  
+  screen.click("D:\\FileName.png");
+  screen.type("a", Key.CTRL);
+  screen.type(Key.BACKSPACE);
+  screen.type("IEdriver");
+  screen.click("D:\\SaveFile.png");
+  System.out.println("File downloaded");
+ }
+}

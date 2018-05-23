@@ -1,0 +1,32 @@
+Apr 09, 2018 3:43:20 PM java.util.logging.LogManager$RootLogger log
+INFO: Test Suite Execution Started...
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: Started Reading OR File OR//OR.xml...
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: txtUserName cyclosUsername
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: txtPassword cyclosPassword
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: btnLogin //input[@value='Submit']
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: lnkLogout Logout
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: Reading OR File OR//OR.xml Done...
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: Started Reading Test Data File testdata//TestData.xml...
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: HEAD //*[@id='topBanner']/div
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: URL http://wl350388:1205/cyclos/do/login
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: USERNAME Ankit
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: PASSWORD 1234
+Apr 09, 2018 3:43:26 PM java.util.logging.LogManager$RootLogger log
+INFO: Reading Test Data File testdata//TestData.xml Done...
+Apr 09, 2018 3:43:32 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Apr 09, 2018 3:43:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Apr 09, 2018 3:43:36 PM java.util.logging.LogManager$RootLogger log
+INFO: Browser Chrome with URL http://wl350388:1205/cyclos/do/login opened successfully...

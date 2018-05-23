@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+	<TestData TCID = "COMMON" Key="txtUserName">cyclosUsername</TestData>
+	<TestData TCID = "COMMON" Key="txtPassword">cyclosPassword</TestData>
+	<TestData TCID = "COMMON" Key="btnLogin">//input[@value='Submit']</TestData>
+	<TestData TCID = "COMMON" Key="btnAccounts">//span[text()='Accounts']</TestData>
+	<TestData TCID = "COMMON" Key="btnManageCurrency">//span[text()='Manage Currencies']</TestData>
+	<TestData TCID = "COMMON" Key="btnNew">newButton</TestData>
+	<TestData TCID = "COMMON" Key="txtCurrencyName">currency(name)</TestData>
+	<TestData TCID = "COMMON" Key="txtCurrencySymbol">currency(symbol)</TestData>
+	<TestData TCID = "COMMON" Key="txtCurrencyPattern">currency(pattern)</TestData>
+	<TestData TCID = "COMMON" Key="txtCurrencyDescription">currency(description)</TestData>
+	<TestData TCID = "COMMON" Key="btnSave">saveButton</TestData>
+	<TestData TCID = "COMMON" Key="btnLogout">//span[text()='Logout']</TestData>
+</TestData>

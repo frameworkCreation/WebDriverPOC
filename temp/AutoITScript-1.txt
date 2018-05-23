@@ -1,0 +1,211 @@
+;;this script contains functions to handle IE popups such as 
+;;'Microsoft Office 2003 Web Components' and 'Browser Authentication'
+;;the defautl behavior is to click on OK for popups And
+;;enter administrator - pass for authentication
+
+;;ms office
+$msOffice = IniRead("dialogs.ini", "MSOFFICE", "msOffice", "Microsoft Office 2003 Web Components")
+
+;;browser authentication
+$BrowserAuthentication = IniRead("dialogs.ini", "IEAUTHENTICATION", "BrowserAuthentication", "Connect to")
+$Username = IniRead("dialogs.ini", "IEAUTHENTICATION", "Username", "administrator")
+$Password = IniRead("dialogs.ini", "IEAUTHENTICATION", "Password", "pass@1234")
+
+;;NS
+$FindResource = IniRead("dialogs.ini", "NSDIALOGS", "FindResource", "Find Resource -- Web Page Dialog")
+
+;;internet explorer
+$IEScriptError = IniRead("dialogs.ini", "IEDIALOGS", "IEScriptError", "Internet Explorer Script Error")
+$IEPrivacy = IniRead("dialogs.ini", "IEDIALOGS", "IEPrivacy", "Privacy")
+$MSIExplorer = IniRead("dialogs.ini", "IEDIALOGS", "MSIExplorer", "Microsoft Internet Explorer")
+$WinIExplorer = IniRead("dialogs.ini", "IEDIALOGS", "WinIExplorer", "Windows Internet Explorer")
+$IESecurityWarning = IniRead("dialogs.ini", "IEDIALOGS", "IESecurityWarning", "Internet Explorer - Security Warning")
+$IESaveReportWindow="Save Report"
+$ImportSettings = "Choose the XML File to Import"
+$IEDestinationFile ="Destination File for Exported XML"
+;;selenium hta browser
+$SelPopUp    = IniRead("dialogs.ini", "HTADIALOGS", "SelPopUp", "Selenium Remote Control")
+$IExplorer =   "Explorer User Prompt"
+$DebugError="Error"
+$JustInTimeDebugError="Visual Studio Just-In-Time Debugger"
+
+;;loop until we terminate
+while(True)
+	Sleep(600)
+	
+	
+	;if WinExists($BrowserAuthentication) Then
+	;	WinActivate($BrowserAuthentication)
+	;	Sleep(200)
+	;Send("{ENTER}")
+	;EndIf
+	
+	;Sleep(600)
+	;;handle "Browser Authentication" popup	
+	if WinExists($BrowserAuthentication) Then
+		WinActivate($BrowserAuthentication)
+
+		;;;;one way to set username and password
+		;;ControlFocus($BrowserAuthentication,"",1003)
+		;;ControlSetText($BrowserAuthentication,"",1003,"administrator")
+		;;ControlFocus($BrowserAuthentication,"",1005)
+		;;ControlSetText($BrowserAuthentication,"",1005,"pass@1234")
+		
+		Send("!U")
+		Send($Username)		
+		Send("!P")
+		Send($Password)				
+		Send("{ENTER}")
+		
+	EndIf
+	
+	;;Sleep(200)
+
+	;;handle "Microsft Office 2003 Web Components" popup
+	if WinExists($msOffice) Then
+		WinActivate($msOffice)
+		;set focus on OK button
+		ControlFocus($msOffice,"","OK")
+		ControlClick($msOffice,"","OK")
+	EndIf
+	
+	;;Sleep(200)
+	
+	;;handle Find Resource -- Web Page Dialog
+	if WinExists($FindResource) Then
+		WinActivate($FindResource)
+		;;just close it for now
+		WinClose($FindResource)
+	EndIf
+	
+	;;Sleep(200)
+	
+	;;handle "Internet Explorer Script Error"
+	if WinExists($IEScriptError) Then
+		WinActivate($IEScriptError)
+		
+		;;select Yes
+		Send ("!Y")
+		
+	EndIf
+	
+	;;Sleep(200)
+	
+	;;handle waring popup about Privacy
+	if WinExists($IEPrivacy) Then
+		WinActivate($IEPrivacy)
+		WinClose($IEPrivacy)
+	EndIf
+	
+	;;Sleep(200)
+	
+	;;handle Microsoft Internet Explorer
+	if (WinExists($MSIExplorer)) Then
+		if (ControlGetText($MSIExplorer,"","&No") == "&No" Or ControlGetText($MSIExplorer,"","OK") == "OK") Then
+			WinActivate($MSIExplorer)
+		
+			;;first try
+		
+			ControlFocus($MSIExplorer,"","&No")
+			ControlClick($MSIExplorer,"","&No")
+			;;second try
+			ControlFocus($MSIExplorer,"","OK")
+			ControlClick($MSIExplorer,"","OK")
+		EndIf
+	EndIf
+	
+	;;handle Windows Internet Explorer
+	if (WinExists($WinIExplorer)) Then
+		if (ControlGetText($WinIExplorer,"","&No") == "&No" Or ControlGetText($WinIExplorer,"","OK") == "OK") Then
+			WinActivate($WinIExplorer)
+			
+			;;first try
+			ControlFocus($WinIExplorer,"","&No")
+			ControlClick($WinIExplorer,"","&No")
+			;;second try
+			ControlFocus($WinIExplorer,"","OK")
+			ControlClick($WinIExplorer,"","OK")
+		EndIf		
+	EndIf
+	
+	;;handle Internet Explorer window
+	if (WinExists("Internet Explorer")) Then
+		WinActivate("Internet Explorer")
+		ControlSend("Internet Explorer","","Internet Explorer_Server","{ALT F4}")
+		WinClose("Internet Explorer")
+	EndIf
+	
+	;;Sleep(200)
+	;;handle Selenium Functional Test Runner v0.7.1-SNAPSHOT [1065]
+	if (WinExists($SelPopUp)) Then		
+		if (ControlGetText($SelPopUp,"","&No") == "&No" Or ControlGetText($SelPopUp,"","OK") == "OK") Then
+			WinActivate($SelPopUp)
+			
+			;;$text = WinGetText($SelPopUp)
+			
+			;;first try
+			WinClose($SelPopUp)
+			
+			;;second try
+			ControlFocus($SelPopUp,"","OK")
+			ControlClick($SelPopUp,"","OK")
+		EndIf	
+	EndIf
+	
+	;;Sleep(200)
+	;;handle Internet Explorer - Security Warning
+	if (WinExists($IESecurityWarning)) Then
+		WinActivate($IESecurityWarning)
+		
+		ControlFocus($IESecurityWarning,"","&Install")
+		ControlClick($IESecurityWarning,"","&Install")
+	EndIf
+	
+	
+	if (WinExists($IESaveReportWindow)) Then
+		WinActivate($IESaveReportWindow)
+		send("!n")
+		send(@ScriptDir & "\" & "Save ReportTC0017.csv");
+		send("!S")
+		;File &name:
+		;Send("!S")		
+    EndIf
+	
+		;Used in test case TC0021
+	if WinExists($ImportSettings) Then
+		WinActivate($ImportSettings)
+		Send ("!n")			
+		Send(@ScriptDir & "\" & "Imported Computers Report.xml");
+		Send ("!O")		
+		;Send("{ENTER}")
+	EndIf
+	
+		Sleep(100)
+	if (WinExists($IEDestinationFile)) Then
+		WinActivate($IEDestinationFile)
+		Send ("!n")	
+		Send(@ScriptDir & "\" & "ExportReport.xml");
+		Send ("!S")	
+		;ControlFocus($IExplorer,"","&Save")
+		;ControlClick($IExplorer,"","&Save")		
+    EndIf
+
+			Sleep(100)
+	if (WinExists($IExplorer)) Then
+		WinActivate($IExplorer)
+		ControlFocus($IExplorer,"","OK")
+		ControlClick($IExplorer,"","OK")	
+    EndIf
+	Sleep(100)
+	if (WinExists($JustInTimeDebugError)) Then
+	  WinActivate($JustInTimeDebugError)                      
+	 ControlFocus($JustInTimeDebugError,"","&No")
+	 ControlClick($JustInTimeDebugError,"","&No")
+	EndIf
+   Sleep(100)
+   if (WinExists($DebugError)) Then
+	   WinActivate($DebugError)                      
+	 ControlFocus($DebugError,"","&No")
+	 ControlClick($DebugError,"","&No")
+	EndIf
+WEnd

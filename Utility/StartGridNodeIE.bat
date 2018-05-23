@@ -1,0 +1,2 @@
+@echo off
+java -jar -Dwebdriver.ie.driver=IEDriverServer.exe selenium-server-standalone-3.11.0.jar -role webdriver -hub http://localhost:4444/grid/register -browser browserName="internet explorer",version=ANY,platform=WINDOWS,maxInstances=7 -maxSession 7 -timeout 120000 -browserTimeout 120000

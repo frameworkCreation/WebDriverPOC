@@ -1,0 +1,52 @@
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: Test Suite Execution Started...
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: Started Reading OR File OR//OR.xml...
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: txtUserName cyclosUsername
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: txtPassword cyclosPassword
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: btnLogin //input[@value='Submit']
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: btnAccounts //span[text()='Accounts']
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: btnManageCurrency //span[text()='Manage Currencies']
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: btnNew newButton
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: txtCurrencyName currency(name)
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: txtCurrencySymbol currency(symbol)
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: txtCurrencyPattern currency(pattern)
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: txtCurrencyDescription currency(description)
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: btnSave saveButton
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: btnLogout //span[text()='Logout']
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: Reading OR File OR//OR.xml Done...
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: Started Reading Test Data File testdata//TestData.xml...
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: HEAD //*[@id='topBanner']/div
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: URL http://wl305118:2018/cyclos/do/login
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: USERNAME Ankit
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: PASSWORD 1234
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: CURRNAME Testing1
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: CURRSYMBOL Testing2
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: CURRPATTERN #amount#Testing3
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: CURRDESCRIPTION Testing4
+Apr 09, 2018 4:50:01 PM java.util.logging.LogManager$RootLogger log
+INFO: Reading Test Data File testdata//TestData.xml Done...
+Apr 09, 2018 4:50:06 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`

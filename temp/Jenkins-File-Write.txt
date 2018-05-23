@@ -1,0 +1,133 @@
+@echo off
+
+echo.
+echo ********************************************************************************
+echo * Creating Config.xml...
+echo ********************************************************************************
+echo ^<?xml version = "1.0" encoding="ISO-8859-1"?^> > Config.xml
+echo ^<XMLStorage^> >> Config.xml
+echo 	^<ConfigData^> >> Config.xml
+echo		^<!-- Test Platform User DNS Domain --^> >> Config.xml
+echo		^<UserDNSDomain VarType="varOleStr"^>^<![CDATA[hq.ad.ipaccess.com]]^>^</UserDNSDomain^> >> Config.xml
+echo 		^<!-- Read Config From Jenkins Or SVN --^> >> Config.xml
+echo 		^<ReadConfigFromJenkinsOrSVN VarType="varOleStr"^>^<![CDATA[%readConfigFromJenkinsOrSVN%]]^>^</ReadConfigFromJenkinsOrSVN^> >> Config.xml
+echo 		^<!-- Path to store automation result --^> >> Config.xml
+echo 		^<ResultPath VarType="varOleStr"^>^<![CDATA[%resultPath%]]^>^</ResultPath^> >> Config.xml
+echo 		^<!-- Test Suite Name --^> >> Config.xml
+echo		^<!-- Result Path Folder Name: MUST MATCH THE FOLDER GIVEN IN ResultPath! --^> >> Config.xml
+echo		^<ResultPathFolder VarType="varOleStr"^>^<![CDATA[NTAFLogs]]^>^</ResultPathFolder^> >> Config.xml
+echo 		^<SuiteName VarType="varOleStr"^>^<![CDATA[%suiteName%]]^>^</SuiteName^> >> Config.xml
+echo 		^<!-- Path of javaws.exe --^> >> Config.xml
+echo 		^<Application VarType="varOleStr"^>^<![CDATA[%applicationPath%]]^>^</Application^> >> Config.xml
+echo 		^<!-- NOS URL --^> >> Config.xml
+echo 		^<ApplicationPath VarType="varOleStr"^>^<![CDATA[%applicationURL%]]^>^</ApplicationPath^> >> Config.xml
+echo 		^<!-- Process Name After Launching the NOS --^> >> Config.xml
+echo 		^<ApplicationProcess VarType="varOleStr"^>^<![CDATA[javaw]]^>^</ApplicationProcess^> >> Config.xml
+echo 		^<!-- Max Process Wait in milliseconds --^> >> Config.xml
+echo 		^<MaxProcessWait VarType="varOleStr"^>^<![CDATA[120000]]^>^</MaxProcessWait^> >> Config.xml
+echo 		^<!-- Max Window Wait in milliseconds --^> >> Config.xml
+echo 		^<MaxWindowWait VarType="varOleStr"^>^<![CDATA[180000]]^>^</MaxWindowWait^> >> Config.xml
+echo 		^<!-- Max Wait Count --^> >> Config.xml
+echo 		^<MaxWait VarType="varOleStr"^>^<![CDATA[100]]^>^</MaxWait^> >> Config.xml
+echo 		^<!-- Max Wizard Wait Count --^> >> Config.xml
+echo 		^<MaxWizardWait VarType="varOleStr"^>^<![CDATA[20]]^>^</MaxWizardWait^> >> Config.xml
+echo 		^<!-- Depth required for Test Complete --^> >> Config.xml
+echo 		^<FindChildDepth VarType="varOleStr"^>^<![CDATA[100]]^>^</FindChildDepth^> >> Config.xml
+echo 		^<!-- NOS Server Node 1 --^> >> Config.xml
+echo 		^<NosServerNode1 VarType="varOleStr"^>^<![CDATA[%NosServerNode1%]]^>^</NosServerNode1^> >> Config.xml
+echo 		^<!-- NOS Server Node 2 --^> >> Config.xml
+echo 		^<NosServerNode2 VarType="varOleStr"^>^<![CDATA[%NosServerNode2%]]^>^</NosServerNode2^> >> Config.xml
+echo 		^<!-- NOS Server Client IP --^> >> Config.xml
+echo 		^<NosServerClientIP VarType="varOleStr"^>^<![CDATA[%NosServerClientIP%]]^>^</NosServerClientIP^> >> Config.xml
+echo 		^<!-- NOS Putty Session --^> >> Config.xml
+echo 		^<NOS VarType="varOleStr"^>^<![CDATA[%NOSPuttySession%]]^>^</NOS^> >> Config.xml
+
+echo 		^<!-- Putty Password --^> >> Config.xml
+echo 		^<PuttyPassword VarType="varOleStr"^>^<![CDATA[%PuttyPassword%]]^>^</PuttyPassword^> >> Config.xml
+
+echo 		^<!-- DSN Connection String for Database connectivity --^> >> Config.xml
+echo 		^<ConStr VarType="varOleStr"^>^<![CDATA[%conStr%]]^>^</ConStr^> >> Config.xml
+echo 		^<!-- Testlink URL --^> >> Config.xml
+echo 		^<TestLinkServerURL VarType="varOleStr"^>^<![CDATA[%testLinkServerURL%]]^>^</TestLinkServerURL^> >> Config.xml
+echo 		^<!-- Testlink Dev Key --^> >> Config.xml
+echo 		^<TestLinkDevKey VarType="varOleStr"^>^<![CDATA[%testLinkDevKey%]]^>^</TestLinkDevKey^>	 >> Config.xml
+echo 		^<!-- Tester User ID --^> >> Config.xml
+echo 		^<Tester VarType="varOleStr"^>^<![CDATA[%tester%]]^>^</Tester^> >> Config.xml
+echo 		^<!-- Project in Testlink --^> >> Config.xml
+echo 		^<ProjectName VarType="varOleStr"^>^<![CDATA[%projectName%]]^>^</ProjectName^> >> Config.xml
+echo 		^<!-- Functional Testplan in Testlink --^> >> Config.xml
+echo 		^<FunctionalTestPlanName VarType="varOleStr"^>^<![CDATA[%functionalTestPlanName%]]^>^</FunctionalTestPlanName^> >> Config.xml
+echo 		^<!-- NOS Build Number --^> >> Config.xml
+echo 		^<NOSBuildNumber VarType="varOleStr"^>^<![CDATA[%nosBuildNum%]]^>^</NOSBuildNumber^> >> Config.xml
+echo 		^<!-- BuildNameAsPerTestLink --^> >> Config.xml
+echo 		^<BuildNameAsPerTestLink VarType="varOleStr"^>^<![CDATA[%BuildNameAsPerTestLink%]]^>^</BuildNameAsPerTestLink^> >> Config.xml
+echo 		^<!-- Ap Release --^> >> Config.xml
+echo 		^<ApRelease VarType="varOleStr"^>^<![CDATA[%ApRelease%]]^>^</ApRelease^> >> Config.xml
+echo 		^<!-- AC Build --^> >> Config.xml
+echo 		^<AcBuild VarType="varOleStr"^>^<![CDATA[%AcBuild%]]^>^</AcBuild^> >> Config.xml
+echo 		^<!-- Performance Testplan in Testlink --^> >> Config.xml
+echo 		^<PerformanceTestPlanName VarType="varOleStr"^>^<![CDATA[%performanceTestPlanName%]]^>^</PerformanceTestPlanName^> >> Config.xml
+echo 		^<!-- TestCaseNameOrVisibleID --^> >> Config.xml
+echo 		^<TestCaseNameOrVisibleID VarType="varOleStr"^>^<![CDATA[%TestCaseNameOrVisibleID%]]^>^</TestCaseNameOrVisibleID^> >> Config.xml
+echo 		^<!-- Testcase Filter -execution_type "2" -priority "4" -exec_status "i" --^> >> Config.xml
+echo 		^<TestcasesFilter VarType="varOleStr"^>^<![CDATA[%testcasesFilter%]]^>^</TestcasesFilter^> >> Config.xml
+echo 		^<!-- Importing Testcases from Testlink --^> >> Config.xml
+
+IF /I "%importTestcasesFromTestLink%" EQU "true"	echo 		^<ImportTestcasesFromTestLink VarType="varOleStr"^>^<![CDATA[YES]]^>^</ImportTestcasesFromTestLink^> >> Config.xml
+
+IF /I "%importTestcasesFromTestLink%" EQU "false"	echo 		^<ImportTestcasesFromTestLink VarType="varOleStr"^>^<![CDATA[NO]]^>^</ImportTestcasesFromTestLink^> >> Config.xml
+
+echo 		^<!-- Exporting Testcases Result into Testlink --^> >> Config.xml
+
+echo 		^<ExportResultToTestLink VarType="varOleStr"^>^<![CDATA[NO]]^>^</ExportResultToTestLink^> >> Config.xml
+
+IF /I "%RunUserInit%" EQU "false"	echo 		^<RunUserInit VarType="varOleStr"^>^<![CDATA[NO]]^>^</RunUserInit^> >> Config.xml
+
+IF /I "%RunUserInit%" EQU "true"	echo 		^<RunUserInit VarType="varOleStr"^>^<![CDATA[YES]]^>^</RunUserInit^> >> Config.xml
+
+echo		^<!-- XML Logging Sub-Folder for Jenkins Results Folder Seeking --^> >> Config.xml
+echo		^<XMLLogSubFolder VarType="varOleStr"^>^<![CDATA[JenkinsXML]]^>^</XMLLogSubFolder^> >> Config.xml
+echo		^<!-- XML Logging Prefix for Jenkins Results File Parser --^> >> Config.xml
+echo		^<XMLLogPrefix VarType="varOleStr"^>^<![CDATA[xmlJenkins]]^>^</XMLLogPrefix^> >> Config.xml
+echo		^<!-- XML Logging Suffix for Jenkins Results File Parser --^> >> Config.xml
+echo		^<XMLLogSuffix VarType="varOleStr"^>^<![CDATA[xml]]^>^</XMLLogSuffix^> >> Config.xml
+echo 	^</ConfigData^> >> Config.xml
+echo ^</XMLStorage^> >> Config.xml
+
+IF /I "%ReadConfigFromJenkinsOrSVN%" EQU "Jenkins"	copy Config.xml "%WORKSPACE%\%SVNREPO%\Config\Config.xml"
+
+IF /I "%ReadConfigFromJenkinsOrSVN%" EQU "SVN"	echo "Using Config.xml from SVN!";
+
+echo.
+echo ********************************************************************************
+echo * Config.xml:
+echo ********************************************************************************
+type "%WORKSPACE%\%SVNREPO%\Config\Config.xml"
+
+echo.
+echo ********************************************************************************
+echo * Testcases.xml (from SVN, Jenkins may override this from TestLink):
+echo ********************************************************************************
+type "%WORKSPACE%\%SVNREPO%\Config\Testcases.xml"
+
+echo.
+echo.
+echo ********************************************************************************
+echo * Workspace       : %WORKSPACE%
+echo * SVN Repository  : %SVNREPO%
+echo * NOS Build Number: %nosBuildNum%
+echo ********************************************************************************
+
+SET PATH=%PATH%;C:\Windows\SysWOW64
+tasklist /fi "imagename eq TestExecute.exe" |find ":" > nul
+if errorlevel 1 taskkill /f /im "TestExecute.exe"
+
+IF /I "%DoYouWantToExecuteNTAF%" EQU "true" start /wait "TestExecute" "%testExecuteExecutablePath%" "%WORKSPACE%\%SVNREPO%\NOSTestAutomationProjectSuite.pjs" /run /exit /SilentMode
+
+echo.
+echo ********************************************************************************
+echo * DONE!
+echo ********************************************************************************
+date /T
+time /T
+echo.

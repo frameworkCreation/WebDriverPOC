@@ -1,0 +1,2 @@
+@echo off
+java -jar -Dwebdriver.gecko.driver=geckodriver.exe selenium-server-standalone-3.11.0.jar -role webdriver -hub http://localhost:4444/grid/register -browser browserName="firefox",version=ANY,platform=WINDOWS,maxInstances=1 -maxSession 1 -timeout 120000 -browserTimeout 120000

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="50" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="com.BusinessScript.CyclosDemo">
+        <methods>
+          <include name="TC0001"/>
+        </methods>
+      </class> <!-- com.BusinessScript.CyclosDemo -->
+      <class name="com.ExecutionLayer.TestSuiteRunner">
+        <methods>
+          <include name="SetUp"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- com.ExecutionLayer.TestSuiteRunner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

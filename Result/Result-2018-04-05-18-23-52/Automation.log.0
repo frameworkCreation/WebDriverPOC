@@ -1,0 +1,40 @@
+Apr 05, 2018 6:24:05 PM java.util.logging.LogManager$RootLogger log
+INFO: Test Suite Execution Started...
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: Started Reading OR File OR//OR.xml...
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: txtUserName ctl00_MainContent_username
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: txtPassword ctl00_MainContent_password
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: btnLogin ctl00_MainContent_login_button
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: lnkLogout Logout
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: Reading OR File OR//OR.xml Done...
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: Started Reading Test Data File testdata//TestData.xml...
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: HEAD //*[@id='aspnetForm']/table/tbody/tr/td[2]/div[1]
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: URL http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: USERNAME Tester
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: PASSWORD test
+Apr 05, 2018 6:24:54 PM java.util.logging.LogManager$RootLogger log
+INFO: Reading Test Data File testdata//TestData.xml Done...
+Apr 05, 2018 6:24:59 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Apr 05, 2018 6:25:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Apr 05, 2018 6:25:04 PM java.util.logging.LogManager$RootLogger log
+INFO: Browser chrome with URL http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx opened successfully...
+Apr 05, 2018 6:25:06 PM java.util.logging.LogManager$RootLogger log
+INFO: PASS Browser opened successfully with test application
+Apr 05, 2018 6:25:15 PM java.util.logging.LogManager$RootLogger log
+INFO: PASS User logged-in successfully
+Apr 05, 2018 6:25:23 PM java.util.logging.LogManager$RootLogger log
+INFO: PASS User logged-out successfully
+Apr 05, 2018 6:25:28 PM java.util.logging.LogManager$RootLogger log
+INFO: Browser Closed Successfully

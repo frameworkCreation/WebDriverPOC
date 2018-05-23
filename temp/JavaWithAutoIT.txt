@@ -1,0 +1,23 @@
+import java.io.IOException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class DownloadFile_IE_AutoIT {
+
+ public static void main(String[] args) throws InterruptedException {
+  System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\IEDriver.exe");
+  WebDriver driver = new InternetExplorerDriver();
+  driver.manage().window().maximize();
+  driver.get("http://www.seleniumhq.org/download/");
+  driver.findElement(By.xpath("//*[@id='mainContent']/p[9]/a[2]")).sendKeys(Keys.ENTER);
+  try {
+   String path="E:\\AutoIT\\test232";
+   String file="E:\\AutoIT\\download_file.exe"+" "+path;
+         Runtime.getRuntime().exec(file);
+     } catch (IOException e) {
+   e.printStackTrace();
+  }
+ }
+}

@@ -1,0 +1,36 @@
+@echo off
+
+echo.
+echo ********************************************************************************
+echo * Creating Config.xml...
+echo ********************************************************************************
+echo ^<?xml version="1.0" encoding="UTF-8"?^> > Config.xml
+echo ^<Automation^> >> Config.xml
+echo ^	<Config^> >> Config.xml
+echo ^		<BROWSER^>%BROWSER%^</BROWSER^> >> Config.xml
+echo ^		<IMPLICIT-WAIT^>90^</IMPLICIT-WAIT^> >> Config.xml
+echo ^		<URL^>http://www.amazon.in/^</URL^> >> Config.xml
+echo ^		<REPORT-HEADING^>Step in contest^</REPORT-HEADING^> >> Config.xml
+echo ^		<TOTAL-TIME-IN-SEC^>^</TOTAL-TIME-IN-SEC^> >> Config.xml
+echo ^		<LAST-RESULT-FILE-PATH^>^</LAST-RESULT-FILE-PATH^> >> Config.xml
+echo ^		<SET-RESULT-IN-QC^>^</SET-RESULT-IN-QC^> >> Config.xml
+echo ^		<QC-URL^>^</QC-URL^> >> Config.xml
+echo ^		<QC-UserID^>^</QC-UserID^> >> Config.xml
+echo ^		<QC-Pwd^>^</QC-Pwd^> >> Config.xml
+echo ^		<QC-Domain^>^</QC-Domain^> >> Config.xml
+echo ^		<QC-ProjectName^>^</QC-ProjectName^> >> Config.xml
+echo ^        	<QC-TestSuitePath^>^</QC-TestSuitePath^> >> Config.xml
+echo ^		<QC-TestSuiteName^>^</QC-TestSuiteName^> >> Config.xml
+echo ^	</Config^> >> Config.xml
+echo ^	<Email^> >> Config.xml
+echo ^		<email-id^>^</email-id^> >> Config.xml
+echo ^	</Email^> >> Config.xml
+echo ^	<Tasks^> >> Config.xml
+echo ^		<Task ID="Smoke" Active="Yes"^>Smoke^</Task^> >> Config.xml
+echo ^	</Tasks^> >> Config.xml
+echo ^	<TestCases^> >> Config.xml						
+echo ^		<TestCase Active="Yes" ID="TC0001" Name="SmokeTest1" TaskID="Smoke" TestDataPath="testdata//TestData.xml" ORPath="OR//OR.xml" ExeTime="20"^>Smoke Test 1 Verification^</TestCase^> >> Config.xml
+echo ^		<TestCase Active="Yes" ID="TC0002" Name="SmokeTest2" TaskID="Smoke" TestDataPath="testdata//TestData.xml" ORPath="OR//OR.xml" ExeTime="20"^>Smoke Test 2 Verification^</TestCase^> >> Config.xml
+echo ^		<TestCase Active="Yes" ID="TC0003" Name="SmokeTest3" TaskID="Smoke" TestDataPath="testdata//TestData.xml" ORPath="OR//OR.xml" ExeTime="20"^>Smoke Test 3 Verification^</TestCase^> >> Config.xml
+echo ^	</TestCases^> >> Config.xml
+echo ^</Automation^> >> Config.xml

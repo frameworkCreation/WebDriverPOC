@@ -1,0 +1,127 @@
+Step;Action;By;Property;Value;Return
+0;FunctionName;;openNewCapitalAccount;"To verify the functionality of Open New Capital Account
+<OL>
+<LI>Select the New Account B Menu from Everyday Finances -> Accounts -> New Account</LI>
+<LI>Click on read more information about capital account</LI>
+<LI>Navigate back to New Account page</LI>
+<LI>Click on open new capital account link</LI>
+<LI>Verify the Input screen for creation of capital account</LI>
+<LI>Verify the functionality of cancel button from Input screen</LI>
+<LI>Verify the Confirm screen for creation of capital account</LI>
+<LI>Verify the functionality of cancel button from Confirm screen</LI>
+<LI>Click on Confirm button</LI>
+<LI>Verify the Receipt screen for creation of capital account</LI>
+</OL>";
+1;Click;LinkText;Konton;;
+2;WaitForPageLoad;;;;
+3;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Konton;Page
+4;Click;LinkText;Öppna konto;;
+5;WaitForPageLoad;;;;
+6;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt konto/placera;Page
+7;Click;Xpath;/html/body/table/tbody/tr[2]/td[3]/div[1]/div/div/p[2]/a[1];;
+8;WaitForPageLoad;;;;
+9;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/div[1]/h1;Kapitalkonto;Page
+10;CheckPointXPathAndTextW;;/html/body/table/tbody/tr[2]/td[3]/div[1]/p[2]/a[1];Ränta;Link
+11;CheckPointXPathAndTextW;;/html/body/table/tbody/tr[2]/td[3]/div[1]/p[2]/a[2];Öppna Kapitalkonto;Link
+12;CheckPointXPathAndTextW;;/html/body/table/tbody/tr[2]/td[3]/div[1]/ul/li[5]/a;insättningsgarantin;Link
+13;CheckPointXPathAndTextW;;/html/body/table/tbody/tr[2]/td[3]/div[1]/table/tbody/tr/td[2]/a;Öppna Kapitalkonto;Link
+14;Click;LinkText;Tillbaka;;
+15;WaitForPageLoad;;;;
+16;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt konto/placera;Page
+17;Click;Xpath;/html/body/table/tbody/tr[2]/td[3]/div[1]/div/div/p[2]/a[2];;
+18;WaitForPageLoad;;;;
+19;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+20;CreateVariable;String;;strTemp;
+21;ReadText;Xpath;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2];;strTemp
+22;If;;"strTemp.contains(""Det går inte att öppna kontot."")";;
+23;Result;FAIL;Already more than 10 accounts are open;true;
+24;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+25;WaitForPageLoad;;;;
+26;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt konto/placera;Page
+27;Click;Xpath;/html/body/table/tbody/tr[2]/td[3]/div[1]/div/div/p[2]/a[2];;
+28;WaitForPageLoad;;;;
+29;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+30;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/h3;Öppna nytt konto;Section
+31;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[3]/td/strong;Kontoinformation;Label
+32;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[4]/td[1];Eget namn på kontot:;Label
+33;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[5]/td/strong;Ränta;Label
+34;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[6]/td[1];Aktuell räntesats:;Label
+35;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[6]/td[3];0,40 %;Label
+36;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[7]/td[1]/strong;Engångsinsättning;Label
+37;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[8]/td;Börja spara genom att göra en överföring direkt.;Label
+38;Click;Xpath;//*[@id='as497_addnew_ix0_0']/td/a;;
+39;WaitForPageLoad;;;;
+40;CheckPointXPathAndTextGW;;//*[@id='as497_new_ix0_0']/td[1];Från konto:;Label
+41;CheckPointXPathAndTextGW;;//*[@id='as497_new_ix0_1']/td[1];Belopp:;Label
+42;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[12]/td[1]/strong;Månadssparande;Label
+43;CheckPointXPathAndTextGW;;//*[@id='tailor_deposit_refactored_accept']/div[1]/table/tbody/tr[13]/td;Ett månadssparande gör det enkelt att spara regelbundet.;Label
+44;Click;Xpath;//*[@id='as896_addnew_ix0_0']/td/a;;
+45;WaitForPageLoad;;;;
+46;CheckPointXPathAndTextGW;;//*[@id='as896_new_ix0_0']/td[1];Från konto:;Label
+47;CheckPointXPathAndTextGW;;//*[@id='as896_new_ix0_1']/td[1];Belopp:;Label
+48;CheckPointXPathAndTextGW;;//*[@id='as896_new_ix0_2']/td[1];Första överföringsdag:;Label
+49;CheckPointXPathAndTextGW;;//*[@id='as896_new_ix0_3']/td[1];Frekvens:;Label
+50;Click;Xpath;//*[@id='as896_new_ix0_0']/td[4]/a;;
+51;WaitForPageLoad;;;;
+52;InputText;Name;tailor_deposit_refactored_account_nickname_textbox;Test Automation;
+53;Click;Xpath;//*[@id='as497_addnew_ix0_0']/td/a;;
+54;WaitForPageLoad;;;;
+55;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+56;WaitForPageLoad;;;;
+57;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Välj konto för engångsinsättning.;Message
+58;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Kontrollera beloppet för engångsinsättning. Minsta belopp är 100 kr.;Message
+59;SelectDropDown;ID;tailor_deposit_refactored_initial_deposit_from_account_dropdown;label=regxp:1506 35 31628;
+60;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+61;WaitForPageLoad;;;;
+62;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Kontrollera beloppet för engångsinsättning. Minsta belopp är 100 kr.;Message
+63;InputText;ID;tailor_deposit_refactored_initial_deposit_amount_textbox;100;
+64;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+65;WaitForPageLoad;;;;
+66;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+67;Click;Name;accept_proposal_accept_proposal$retailor_command;;
+68;WaitForPageLoad;;;;
+69;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+70;Click;Xpath;//*[@id='as497_new_ix0_0']/td[4]/a;;
+71;WaitForPageLoad;;;;
+72;Click;Xpath;//*[@id='as896_addnew_ix0_0']/td/a;;
+73;WaitForPageLoad;;;;
+74;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+75;WaitForPageLoad;;;;
+76;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Välj konto för månadssparande.;Message
+77;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Kontrollera beloppet för månadssparande. Minsta belopp är 100 kr.;Message
+78;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Kontrollera datum för månadssparande.;Message
+79;SelectDropDown;ID;tailor_deposit_refactored_recurring_deposit_from_account_dropdown;label=regxp:1506 35 31628;
+80;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+81;WaitForPageLoad;;;;
+82;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Kontrollera beloppet för månadssparande. Minsta belopp är 100 kr.;Message
+83;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Kontrollera datum för månadssparande.;Message
+84;InputText;ID;tailor_deposit_refactored_recurring_deposit_amount_textbox0;100;
+85;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+86;WaitForPageLoad;;;;
+87;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table/tbody/tr/td[2]/strong;Kontrollera datum för månadssparande.;Message
+88;InputText;ID;tailor_deposit_refactored_recurring_deposit_due_date_textbox0;2012-06-21;
+89;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+90;WaitForPageLoad;;;;
+91;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+92;Click;Name;accept_proposal_accept_proposal$cancel_command;;
+93;WaitForPageLoad;;;;
+94;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt konto/placera;Page
+95;Click;Xpath;/html/body/table/tbody/tr[2]/td[3]/div[1]/div/div/p[2]/a[2];;
+96;WaitForPageLoad;;;;
+97;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+98;InputText;Name;tailor_deposit_refactored_account_nickname_textbox;Test Automation;
+99;Click;Name;tailor_deposit_refactored_tailor_open_deposit$tailor_deposit_action;;
+100;WaitForPageLoad;;;;
+101;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+102;SelectCheckBox;ID;accept_proposal_low_level_confirmation_checkbox;;
+103;CheckPointXPathAndTextGW;;//*[@id='accept_proposal_accept']/div[2]/table/tbody/tr/td[2]/a;Kapitalkonto, Allmänna villkor;Link
+104;Click;Name;accept_proposal_accept_proposal$confirm_proposal;;
+105;WaitForPageLoad;;;;
+106;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/h1;Öppna nytt Kapitalkonto;Page
+107;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/table[1]/tbody/tr/td[2];Ditt nya konto är nu öppnat och du kan se det i din kontoöversikt. ;Message
+108;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/div[4]/table[1]/tbody/tr[3]/td[2];Test Automation;Capital Account Name
+109;CheckPointXPathAndTextG;;/html/body/table/tbody/tr[2]/td[3]/div[4]/table[1]/tbody/tr[8]/td[2];0,40 %;Capital Account Intereste Rate
+110;CheckPointXPathAndTextW;;/html/body/table/tbody/tr[2]/td[3]/table[2]/tbody/tr/td[2]/a;Skriv ut;Link
+111;Click;LinkText;Till Konton;;
+112;WaitForPageLoad;;;;
+113;CheckPointXPathAndText;;/html/body/table/tbody/tr[2]/td[3]/h1;Konton;Page
